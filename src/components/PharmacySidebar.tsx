@@ -18,7 +18,7 @@ import {
   User, 
   Users, 
   Search, 
-  PillsBottle, 
+  PillBottle, 
   Pill 
 } from "lucide-react";
 
@@ -27,7 +27,7 @@ export function PharmacySidebar() {
     <Sidebar>
       <SidebarHeader className="py-4">
         <div className="flex items-center gap-2 px-4">
-          <PillsBottle className="h-6 w-6 text-pharmacy-600" />
+          <PillBottle className="h-6 w-6 text-pharmacy-600" />
           <span className="font-semibold text-lg">PharmEase</span>
         </div>
       </SidebarHeader>
@@ -39,7 +39,7 @@ export function PharmacySidebar() {
             <SidebarMenu>
               <SidebarMenuItem>
                 <SidebarMenuButton className="bg-sidebar-accent text-sidebar-accent-foreground">
-                  <PillsBottle className="h-4 w-4" />
+                  <PillBottle className="h-4 w-4" />
                   <span>All Prescriptions</span>
                 </SidebarMenuButton>
               </SidebarMenuItem>

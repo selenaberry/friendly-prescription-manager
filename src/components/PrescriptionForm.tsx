@@ -79,7 +79,24 @@ export function PrescriptionForm({
   });
 
   function onSubmit(data: z.infer<typeof prescriptionSchema>) {
-    onSave(data);
+    // Ensure we have all required properties
+    const prescriptionData: Omit<Prescription, 'id'> = {
+      patientName: data.patientName,
+      patientId: data.patientId,
+      medication: data.medication,
+      dosage: data.dosage,
+      quantity: data.quantity,
+      doctor: data.doctor,
+      dateIssued: data.dateIssued,
+      dateExpires: data.dateExpires,
+      status: data.status,
+      refillsRemaining: data.refillsRemaining,
+      refillsTotal: data.refillsTotal,
+      instructions: data.instructions,
+      notes: data.notes,
+    };
+    
+    onSave(prescriptionData);
     onClose();
   }
 

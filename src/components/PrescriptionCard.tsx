@@ -4,7 +4,7 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Prescription } from "@/types/prescription";
 import { PrescriptionStatusBadge } from "./PrescriptionStatusBadge";
-import { Check, Edit, Pill, PillsBottle, Trash } from "lucide-react";
+import { Check, Edit, Pill, PillBottle, Trash } from "lucide-react";
 
 type PrescriptionCardProps = {
   prescription: Prescription;
@@ -27,7 +27,7 @@ export function PrescriptionCard({
         <div className="p-4 border-b">
           <div className="flex justify-between items-start mb-2">
             <div className="flex items-center">
-              <PillsBottle className="h-5 w-5 text-pharmacy-600 mr-2" />
+              <PillBottle className="h-5 w-5 text-pharmacy-600 mr-2" />
               <h3 className="font-semibold">{prescription.id}</h3>
             </div>
             <PrescriptionStatusBadge status={prescription.status} />
